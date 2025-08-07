@@ -144,4 +144,3 @@ class Database {
 
 // Exportar instancia de la base de datos
 window.db = new Database();
-```
