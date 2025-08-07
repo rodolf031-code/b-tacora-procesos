@@ -1,405 +1,106 @@
-html
-<! <!DOCTYPE
-DOCTYPE html
-html> >
-< <html
-html lang
-lang= =""es es""> >
-< <head
-head> >
-< <meta
-meta charset
-charset= =""UTF-8
-UTF-8""> >
-< <meta
-meta name
-name= =""
-viewportviewport""content
-content= =""width=device-width, initial-scale=1.0width=device-width, initial-scale=1.0""> >
-< <title
-title> >Bitácora de Levantamiento de Procesos
-Bitácora de Levantamiento de Procesos</ </title
-title> >
-< <link
-link rel
-rel= =""stylesheet
-href
-stylesheet""href
-= =""style.css
-style.css""> >
-</ </head
-head> >
-< <body
-body> >
-<!-- Lo
-<!-- Lo
-ader -->
-ader -->
-< <div
-div id id= =""loader
-loader""class
-class= =""loader
-loader""> >
-< <div
-div class
-class= =""loader-spinner
-div
-loader-spinner""> ></ </div
-> >
-< <p p> Cargando...</ </p p> >
->Cargando...
-div
-</ </div
-> >
-<!-- Header -->
-<!-- Header -->
-< <div
-div class
-class= =""header
-header""> >
-< <div
-div class
-class= =""container
-container""> >
-< <h1 h1> >📋 Bitácora de Levantamiento de Procesos
-📋 Bitácora de Levantamiento de Procesos</ </h1 h1> >
-Sistema de gestión y
-< <p p> >Sistema de gestión y
-visualización de reuniones de análisis</ </p p> >
-visualización de reuniones de análisis
-div
-</ </div
-> >
-div
-</ </div
-> >
-< <div
-div class
-class= =""container
-container""> >
-<!-- Uplo
-<!-- Uplo
-ad Section -->
-ad Section -->
-< <div
-div class
-class= =""upload-section
-upload-section""> >
-< <h2 h2> >Cargar Nueva Reunión
-Cargar Nueva Reunión</ </h2 h2> >
-< <div
-div class
-class= =""upload-areaupload-area""id id= =""uploadAreauploadArea""> >
-< <div
-div class
-class= =""upload-icon
-div
-upload-icon""> >📁 📁</ </div
-> >
-< <p p> >Arrastra tu archivo aquí o haz clic para seleccionar
-Arrastra tu archivo aquí o haz clic para seleccionar</ </p p> >
-< <p p style
-style= =""font-size
-font-size::14 14px px;;color
-color::
-varvar((--text-light
---text-light));;margin-top
-margin-top::10 10px px;;""> >
-Formatos aceptados: .txt, .md
-Formatos aceptados: .txt, .md
-</ </p p> >
-div
-</ </div
-> >
-< <input
-input type
-type= =""file
-file""id id= =""fileInput
-fileInput""accept
-accept= ="".txt,.md
-.txt,.md""style
-style= =""display
-display:: none
-none;;""> >
-< <button
-button class
-class= =""btn btn-primary
-btn btn-primary""onclick
-onclick= =""document
-document..getElementById
-getElementById(('fileInput'
-'fileInput'))..click
-click(())""> >
-Seleccionar Archivo
-Seleccionar Archivo
-</ </button
-button> >
-div
-</ </div
-> >
-<!-- Sta
-<!-- Sta
-ts Summary -->
-ts Summary -->
-< <div
-div class
-class= =""stats-summary
-stats-summary""id id= =""statsSummary
-statsSummary""> >
-< <div
-div class
-class= =""stat-card
-stat-card""> >
-< <div
-div class
-class= =""stat-value
-stat-value""id id= =""totalMeetings
-div
-totalMeetings""> >0 0</ </div
-> >
-< <div
-div class
-class= =""stat-label
-stat-label""> >Total Reuniones
-div
-Total Reuniones</ </div
-> >
-div
-</ </div
-> >
-< <div
-div class
-class= =""stat-card
-stat-card""> >
-< <div
-div class
-class= =""stat-value
-stat-value""id id= =""totalProcesses
-div
-totalProcesses""> >0 0</ </div
-> >
-< <div
-div class
-class= =""stat-label
-stat-label""> >Procesos Identificados
-div
-Procesos Identificados</ </div
-> >
-div
-</ </div
-> >
-< <div
-div class
-class= =""stat-card
-stat-card""> >
-< <div
-div class
-class= =""stat-value
-stat-value""id id= =""totalSystems
-div
-totalSystems""> >0 0</ </div
-> >
-< <div
-div class
-class= =""stat-label
-stat-label""> >Sistemas Documentados
-div
-Sistemas Documentados</ </div
-> >
-div
-</ </div
-> >
-< <div
-div class
-class= =""stat-card
-stat-card""> >
-< <div
-div class
-class= =""stat-value
-stat-value""id id= =""totalFindings
-div
-totalFindings""> >0 0</ </div
-> >
-< <div
-div class
-class= =""stat-label
-stat-label""> >Hallazgos Importantes
-div
-Hallazgos Importantes</ </div
-> >
-div
-</ </div
-> >
-div
-</ </div
-> >
-<!-- Filters -->
-<!-- Filters -->
-< <div
-div class
-class= =""filtersfilters""> >
-< <div
-div class
-class= =""filter-group
-filter-group""> >
-< <label
-label for
-for= =""searchInput
-searchInput""> >Buscar
-Buscar</ </label
-label> >
-< <input
-input type
-type= =""text
-text""id id= =""searchInput
-searchInput""placeholder
-placeholder= =""Buscar en reuniones...
-Buscar en reuniones...""> >
-div
-</ </div
-> >
-< <div
-div class
-class= =""filter-group
-filter-group""> >
-< <label
-label for
-for= =""departmentFilter
-departmentFilter""> >Departamento
-Departamento</ </label
-label> >
-< <select
-select id id= =""departmentFilter
-departmentFilter""> >
-option
-< <option
-valuevalue= =""""> >Todos los departamentos
-Todos los departamentos</ </option
-option> >
-</ </select
-select> >
-div
-</ </div
-> >
-< <div
-div class
-class= =""filter-group
-filter-group""> >
-< <label
-label for
-for= =""dateFilter
-dateFilter""> >Fecha
-Fecha</ </label
-label> >
-< <input
-input type
-type= =""date
-date""id id= =""dateFilter
-dateFilter""> >
-div
-</ </div
-> >
-div
-</ </div
-> >
-<!-- Timeline -->
-<!-- Timeline -->
-< <div
-div class
-class= =""timeline
-timeline""id id= =""timeline
-timeline""> >
-<!-- Los items se agregarán dinámic
-<!-- Los items se agregarán dinámic
-div
-</ </div
-> >
-div
-</ </div
-> >
-amente aquí -->
-amente aquí -->
-<!-- Modal -->
-<!-- Modal -->
-< <div
-div id id= =""meetingModal
-meetingModal""class
-class= =""modal
-modal""> >
-< <div
-div class
-class= =""modal-content
-modal-content""> >
-< <div
-div class
-class= =""modal-header
-modal-header""> >
-< <h2 h2id id= =""modalTitle
-modalTitle""> >Detalles de la Reunión
-Detalles de la Reunión</ </h2 h2> >
-< <span
-span class
-class= =""close
-close""onclick
-onclick= =""app
-app..closeModal
-closeModal(())""> >&times;
-&times;</ </span
-span> >
-div
-</ </div
-> >
-< <div
-div class
-class= =""modal-body
-modal-body""id id= =""modalBody
-modalBody""> >
-<!-- El c
-<!-- El c
-ontenido se c
-ontenido se c
-argará dinámic
-argará dinámic
-amente -->
-amente -->
-div
-</ </div
-> >
-div
-</ </div
-> >
-div
-</ </div
-> >
-<!-- Notific
-<!-- Notific
-a
-a
-ciones -->
-ciones -->
-< <div
-div id id= =""notifications
-div
-notifications""> ></ </div
-> >
-<!-- Scripts -->
-<!-- Scripts -->
-< <script
-script src
-src= =""https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2
-https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2""> ></ </script
-script> >
-< <script
-script src
-src= =""supabase-client.js
-supabase-client.js""> ></ </script
-script> >
-< <script
-script src
-src= =""app.js
-app.js""> ></ </script
-script> >
-</ </body
-body> >
-</ </html
-html> >s
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitácora de Levantamiento de Procesos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-spinner"></div>
+        <p>Cargando...</p>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="container">
+            <h1>📋 Bitácora de Levantamiento de Procesos</h1>
+            <p>Sistema de gestión y visualización de reuniones de análisis</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Upload Section -->
+        <div class="upload-section">
+            <h2>Cargar Nueva Reunión</h2>
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">📁</div>
+                <p>Arrastra tu archivo aquí o haz clic para seleccionar</p>
+                <p style="font-size: 14px; color: var(--text-light); margin-top: 10px;">
+                    Formatos aceptados: .txt, .md
+                </p>
+            </div>
+            <input type="file" id="fileInput" accept=".txt,.md" style="display: none;">
+            <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">
+                Seleccionar Archivo
+            </button>
+        </div>
+
+        <!-- Stats Summary -->
+        <div class="stats-summary" id="statsSummary">
+            <div class="stat-card">
+                <div class="stat-value" id="totalMeetings">0</div>
+                <div class="stat-label">Total Reuniones</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="totalProcesses">0</div>
+                <div class="stat-label">Procesos Identificados</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="totalSystems">0</div>
+                <div class="stat-label">Sistemas Documentados</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="totalFindings">0</div>
+                <div class="stat-label">Hallazgos Importantes</div>
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <div class="filter-group">
+                <label for="searchInput">Buscar</label>
+                <input type="text" id="searchInput" placeholder="Buscar en reuniones...">
+            </div>
+            <div class="filter-group">
+                <label for="departmentFilter">Departamento</label>
+                <select id="departmentFilter">
+                    <option value="">Todos los departamentos</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="dateFilter">Fecha</label>
+                <input type="date" id="dateFilter">
+            </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline" id="timeline">
+            <!-- Los items se agregarán dinámicamente aquí -->
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="meetingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Detalles de la Reunión</h2>
+                <span class="close" onclick="app.closeModal()">&times;</span>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- El contenido se cargará dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Notificaciones -->
+    <div id="notifications"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-client.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
