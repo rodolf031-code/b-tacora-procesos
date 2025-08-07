@@ -488,4 +488,4 @@ document.head.appendChild(styleElement);
 
 // Iniciar la aplicación
 const app = new BitacoraApp();
-</script>
+//</script>
